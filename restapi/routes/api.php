@@ -19,5 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('test', [StudentController::class, 'index'])->name('indexapi');
-Route::post('test', [StudentController::class, 'upload'])->name('uploadapi');
+Route::get('watch', [StudentController::class, 'index'])->name('indexapi');
+Route::post('store', [StudentController::class, 'upload'])->name('uploadapi');
+Route::put('edit/{id}', [StudentController::class, 'edit'])->name('editapi');
+Route::delete('delete/{id}', [StudentController::class, 'delete'])->name('deleteapi');
