@@ -23,3 +23,4 @@ Route::get('watch', [StudentController::class, 'index'])->name('indexapi');
 Route::post('store', [StudentController::class, 'upload'])->name('uploadapi');
 Route::put('edit/{id}', [StudentController::class, 'edit'])->name('editapi');
 Route::delete('delete/{id}', [StudentController::class, 'delete'])->name('deleteapi');
+Route::patch('delete/{id}', [StudentController::class, 'delete'])->name('deleteapi');
